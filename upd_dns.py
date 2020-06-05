@@ -77,4 +77,3 @@ finally:
     request_socket.close()
     with open('cache.txt', 'wb') as cache_file:
         pickle.dump(cache, cache_file)
-    print(cache)
