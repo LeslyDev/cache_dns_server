@@ -32,7 +32,6 @@ def get_info_in_cache():
         if data:
             processed_data = dnslib.DNSRecord.parse(data)
             for question in processed_data.questions:
-                print(question)
                 if (question.qname in cache) and \
                         (question.qtype in cache[question.qname]):
                     info, ttl = cache[question.qname][question.qtype]
